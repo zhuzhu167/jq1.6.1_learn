@@ -1,6 +1,6 @@
 (function (global, factory) {
-    return factory;
-})(this, function () {
+    return factory.call(global, global.jQuery);
+})(this, function (global, factory) {
     var // Promise methods
         // 注意，没有以下方法：resolveWith resolve rejectWith reject pipe when cancel
         // 即不允许调用resolve reject cancel等
